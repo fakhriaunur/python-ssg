@@ -1,6 +1,6 @@
 {
   "packages": [
-    "python@latest",
+    "python@3.12.5",
   ],
   "shell": {
     "init_hook": [

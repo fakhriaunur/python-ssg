@@ -1,7 +1,7 @@
 {
   "lockfile_version": "1",
   "packages": {
-    "python@latest": {
+    "python@3.12.5": {
       "last_modified": "2024-09-10T15:01:03Z",
       "plugin_version": "0.0.4",
       "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#python3",
