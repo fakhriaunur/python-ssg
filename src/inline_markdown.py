@@ -97,7 +97,7 @@ def split_nodes_link(old_nodes):
                 remaining_text = ""
             
             if remaining_text:
-                new_nodes.append(remaining_text, text_type_text)
+                new_nodes.append(TextNode(remaining_text, text_type_text))
     
     return new_nodes
 
