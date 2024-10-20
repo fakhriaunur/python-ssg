@@ -1,3 +1,6 @@
+import os
+import shutil
+from recursive_copy import recursive_copy
 from textnode import *
 from htmlnode import HTMLNode
 from textnode import text_node_to_html_node
@@ -13,6 +16,12 @@ def main():
     
     html_node_result = text_node_to_html_node(text_node)
     print(html_node_result)
+    
+    dir_path_static = "./static"
+    dir_path_public = "./public"
+    
+    print("Copying static dir to public dir...")
+    recursive_copy(dir_path_static, dir_path_public)
 
 if __name__ == "__main__":
     main()
