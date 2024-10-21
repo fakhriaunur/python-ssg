@@ -1,5 +1,6 @@
 import os
 import shutil
+from generate_page import generate_page
 from recursive_copy import recursive_copy
 from textnode import *
 from htmlnode import HTMLNode
@@ -22,6 +23,9 @@ def main():
     
     print("Copying static dir to public dir...")
     recursive_copy(dir_path_static, dir_path_public)
+    
+    print("Generating a static page")
+    generate_page("./content/index.md", "./template.html", "./public/index.html")
 
 if __name__ == "__main__":
     main()

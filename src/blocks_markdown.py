@@ -88,10 +88,10 @@ def block_to_html_node(block):
         return quote_to_html_node(block)
     
     if block_type == block_type_olist:
-        return ulist_to_html_node(block)
+        return olist_to_html_node(block)
     
     if block_type == block_type_ulist:
-        return olist_to_html_node(block)
+        return ulist_to_html_node(block)
     
     raise ValueError(f"Invalid block_type {block_type}")
 
@@ -156,6 +156,7 @@ def ulist_to_html_node(block: str):
     
     for item in items:
         text = item[2:]
+        # text = item.strip()[1:].strip()
         children = text_to_children(text)
         html_items.append(ParentNode("li", children))
     
