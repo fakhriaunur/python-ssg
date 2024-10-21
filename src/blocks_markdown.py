@@ -50,7 +50,7 @@ def block_to_block_type(markdown: str) -> str:
             number_part, rest = parts
             
             if not number_part.strip().isdigit():
-                return "paragrah"
+                return "paragraph"
             
             if int(number_part) != current_numbering:
                 return "paragraph"

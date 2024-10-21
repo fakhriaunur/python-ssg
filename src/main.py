@@ -1,6 +1,6 @@
 import os
 import shutil
-from generate_page import generate_page
+from generate_page import generate_page, generate_pages_recursive, generate_pages_recursive_pathlib
 from recursive_copy import recursive_copy
 from textnode import *
 from htmlnode import HTMLNode
@@ -25,7 +25,9 @@ def main():
     recursive_copy(dir_path_static, dir_path_public)
     
     print("Generating a static page")
-    generate_page("./content/index.md", "./template.html", "./public/index.html")
+    # generate_page("./content/index.md", "./template.html", "./public/index.html")
+    # generate_pages_recursive("./content", "./template.html", "./public")
+    generate_pages_recursive_pathlib("./content", "./template.html", "./public")
 
 if __name__ == "__main__":
     main()
